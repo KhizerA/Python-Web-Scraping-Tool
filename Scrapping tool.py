@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import pandas
 import sys
 
-file = pandas.read_csv('C:/Users/khize/OneDrive/Desktop/Abu b2b/True North/Links.csv')
+file = pandas.read_csv('[Insert links csv file path]')
 link_list = file['Link'].tolist()
 master_l = []
 master_p = []
@@ -43,7 +43,7 @@ for index, links in enumerate(link_list):
 
 dictionary = {'Link': master_l, 'Product': master_p, 'Description': master_d}
 df = pandas.DataFrame(dictionary)
-df.to_csv('C:/Users/khize/OneDrive/Desktop/Abu b2b/True North/True North Scrape.csv')
+df.to_csv('[Insert final csv file path]')
 
 
 
